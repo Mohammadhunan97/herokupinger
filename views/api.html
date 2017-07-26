@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Heroku Pinger</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:600" rel="stylesheet">
+	<link rel="shortcut icon" href="/logo"/>
+	<link rel="manifest" href="/manifest" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+	<style>
+	body{
+		text-align: center;
+	}
+	code{
+		background: #000;
+		color: white;
+		padding: 10px;
+		
+	}
+	</style>
+</head>
+<body>
+	<h1> API </h1>
+	<hr/>
+	<p>To post a new url from command line run the following command in your terminal:</p>
+	<code>
+		curl -H "Content-Type: application/json" -X POST -d '{"url": "<your url>"}' https://myherokupinger.herokuapp.com/app/new
+	</code>
+	<p> You should replace "<your url>" with whatever your url is for instance if your url was https://my-header-parser.herokuapp.com you would run the following command: </p>
+	<code>
+		curl -H "Content-Type: application/json" -X POST -d '{"url": "https://my-header-parser.herokuapp.com"}' https://myherokupinger.herokuapp.com/app/new
+	</code>
+	<p> If you're url has been posted successfully, you should see something like the following:</p>
+	<code>
+		Found. Redirecting to /submitted
+	</code>
+	<p> If you're url has failed and has not been posted, you should see the following error message:<p>
+	<code>
+		Found. Redirecting to /false-url
+	</code>
+</body>
+</html>

@@ -31,6 +31,14 @@ app.get("/",(req,res)=>{
 	res.end();
 })
 
+app.get("/api",(req,res)=>{
+	let html = fs.readFileSync("views/api.html");
+	res.write(html);
+	res.end();
+})
+
+
+
 app.get("/stylesheet",(req,res)=>{
 	let css = fs.readFileSync("public/style.css");
 	res.write(css);
