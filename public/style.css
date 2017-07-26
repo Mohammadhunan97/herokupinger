@@ -1,7 +1,10 @@
 body{
-	font-family: 'Source Code Pro', monospace;
+	color: white;
+	margin: 0px;
+	padding: 0px;
 }
 .title{
+	font-family: 'Source Code Pro', monospace;
 	text-align: center;
     margin-top: 20vh;
     font-size: 5.4em;
@@ -15,7 +18,7 @@ body{
 	resize: none;
 	width: 70vw;
 	height: 12vh;
-	margin-left: 10vw;
+	margin-left: 15vw;
 	color: white;
 	background-color: transparent;
 	font-size: 3.1em;
@@ -29,4 +32,24 @@ body{
 	border-radius: 5px;
 	margin-top: 2vh;
 	margin-left: 45vw;
+}
+.copyright{
+	text-align: center;
+}
+a{
+	display: inline-block;
+	color: white;
+}
+.icons{
+	margin-left:45vw;
+}
+@media screen and (max-width: 700px) {
+  .submit,.icons{
+  	margin-left: 38vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .submit,.icons{
+  	margin-left: 27vw;
+  }
 }
