@@ -41,15 +41,23 @@ a{
 	color: white;
 }
 .icons{
-	margin-left:45vw;
+	margin-left:33vw;
 }
-@media screen and (max-width: 700px) {
-  .submit,.icons{
+@media screen and (min-width: 1020px) {
+  .icons{
   	margin-left: 38vw;
   }
 }
-@media screen and (max-width: 400px) {
-  .submit,.icons{
+@media screen and (max-width: 725px) {
+  .submit{
+  	margin-left: 34vw;
+  }
+}
+@media screen and (max-width: 475px) {
+  .submit{
   	margin-left: 27vw;
+  }
+  .icons{
+  	margin-left: 20vw;
   }
 }
