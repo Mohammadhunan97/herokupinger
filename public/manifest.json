@@ -1,0 +1,8 @@
+{
+  "name": "Heroku Pinger",
+  "short_name": "Heroku Pinger",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e74c3c",
+  "description": "Prevents your app from falling asleep, and reduces load time by roughly 5 seconds per application. Copyright Mohammad Hunan. See the repository: https://github.com/Mohammadhunan97/herokupinger",
+}
