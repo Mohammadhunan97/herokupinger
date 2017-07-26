@@ -15,7 +15,7 @@
 		background: #000;
 		color: white;
 		padding: 10px;
-		
+
 	}
 	</style>
 </head>
@@ -24,9 +24,9 @@
 	<hr/>
 	<p>To post a new url from command line run the following command in your terminal:</p>
 	<code>
-		curl -H "Content-Type: application/json" -X POST -d '{"url": "<your url>"}' https://myherokupinger.herokuapp.com/app/new
+		curl -H "Content-Type: application/json" -X POST -d '{"url": "%your url%"}' https://myherokupinger.herokuapp.com/app/new
 	</code>
-	<p> You should replace "<your url>" with whatever your url is for instance if your url was https://my-header-parser.herokuapp.com you would run the following command: </p>
+	<p> You should replace "%your url%" with whatever your url is for instance if your url was https://my-header-parser.herokuapp.com you would run the following command: </p>
 	<code>
 		curl -H "Content-Type: application/json" -X POST -d '{"url": "https://my-header-parser.herokuapp.com"}' https://myherokupinger.herokuapp.com/app/new
 	</code>
