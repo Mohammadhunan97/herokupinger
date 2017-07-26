@@ -3,7 +3,8 @@ const app = express();
 const fs = require("file-system");
 const bodyParser = require('body-parser');
 const http = require("http");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
+
 let pingfile = JSON.parse(fs.readFileSync("public/url.json"));
 setInterval(()=>{
 	pingfile.urls.forEach((url)=>{
@@ -18,7 +19,11 @@ setInterval(()=>{
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+app.get("/service-worker.js",(req,res)=>{
+	let sw = fs.readFileSync("public/service-worker.js");
+	res.write(sw);
+	res.end();
+})
 
 app.get("/",(req,res)=>{
 	let html = fs.readFileSync("views/index.html");
@@ -67,4 +72,6 @@ app.post("/app/new",(req,res)=>{
 	res.end();
 })
 
-app.listen(port);
+app.listen(port,(err)=>{
+	console.log("listening on port",port);
+});
