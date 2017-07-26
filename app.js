@@ -3,7 +3,7 @@ const app = express();
 const fs = require("file-system");
 const bodyParser = require('body-parser');
 const http = require("http");
-
+const port = process.env.PORT || 3000;
 let pingfile = JSON.parse(fs.readFileSync("public/url.json"));
 setInterval(()=>{
 	pingfile.urls.forEach((url)=>{
@@ -67,4 +67,4 @@ app.post("/app/new",(req,res)=>{
 	res.end();
 })
 
-app.listen(3000);
+app.listen(port);
